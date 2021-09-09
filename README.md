@@ -1,6 +1,6 @@
 # Cyber Security Bootcamp, Project 1 - Ryan Cameron
 
-Automated ELK Stack Deployment
+# Automated ELK Stack Deployment
 The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the : ( etc/ansible/filebeat-playbook.yml )  file may be used to install only certain pieces of it, such as Filebeat.
@@ -19,7 +19,7 @@ Machines Being Monitored
 How to Use the Ansible Build
 
 
-Description of the Topology
+# Description of the Topology
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 Load balancing ensures that the application will be highly :  safe from DDos attacks by changing the flow of web traffic  , in addition to restricting :  outside access, we can use a remote Virtual Machine to safely log in  to the network.
 
@@ -75,7 +75,7 @@ Linux
 
 
 
-Access Policies
+# Access Policies
 The machines on the internal network are not exposed to the public Internet.
 Only the :  5601 Kibana Port  machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 
@@ -123,7 +123,7 @@ ELK-Vnet
 No
 10.1.0.0/16  /  40.88.139.89
 
-Elk Configuration
+# Elk Configuration
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
 :  you can put commands into multiple servers from a single playbook 
 
@@ -151,7 +151,7 @@ These Beats allow us to collect the following information from each machine:
 :  Metricbeat monitors collected metrics/stats then sends them to an output, Elasticsearch or Logstash. 
 
 
-Using the Playbook
+# Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
 SSH into the control node and follow the steps below:
 
