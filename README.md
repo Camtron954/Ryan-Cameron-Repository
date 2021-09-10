@@ -37,8 +37,7 @@ The configuration details of each machine may be found below.
 | ELK-VM        | Server        | 10.1.0.4    | Linux            |
 
 
-![alt text][https://github.com/Camtron954/Ryan-Cameron-Repository/blob/main/Diagrams/Azure%20Resource%20Group.png]
-
+![Azure Resource Group](https://user-images.githubusercontent.com/82239563/132780932-5c97c829-214e-4d69-9f16-efc3e2812578.png)
 
 # Access Policies
 The machines on the internal network are not exposed to the public Internet.
@@ -64,7 +63,8 @@ Machines within the network can only be accessed by :
 
 # Elk Configuration
 
-![alt text][https://github.com/Camtron954/Ryan-Cameron-Repository/blob/main/Diagrams/ELK%20diagram.drawio.png]
+![ELK diagram drawio](https://user-images.githubusercontent.com/82239563/132780772-e487077a-7642-4f01-ae68-b8d9709f114d.png)
+
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
 + you can put commands into multiple servers from a single playbook 
