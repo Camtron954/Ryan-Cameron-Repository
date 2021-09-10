@@ -103,6 +103,7 @@ Run the playbook, and navigate to ____ to check that the installation worked as 
 
 
 Which file is the playbook? Where do you copy it? 
+(https://github.com/Camtron954/Ryan-Cameron-Repository/blob/main/Ansible/filebeat-playbook.yml)
 + [/etc/ansible/filebeat-config.yml]
 Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?
 + the /etc/ansible/host file,  then include the Web/ELK server IP's 
