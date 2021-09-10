@@ -8,15 +8,14 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
 This document contains the following details:
 
-Description of the Topology
++ Description of the Topology
 Access Policies
 ELK Configuration
 
-Beats in Use
++ Beats in Use
 Machines Being Monitored
 
-
-How to Use the Ansible Build
++ How to Use the Ansible Build
 
 
 # Description of the Topology
@@ -28,48 +27,13 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 
 
 The configuration details of each machine may be found below.
-Note: Use the Markdown Table Generator to add/remove values from the table.
 
-
-
-Name
-Function
-IP Address
-Operating System
-
-
-
-
-Jump Box
-Gateway
-10.0.0.9
-Linux
-
-
-Web1
-Server
-10.0.0.6
-Linux
-
-
-
-
-
-Web2
-Server
-10.0.0.7
-Linux
-
-
-
-
-
-ELK-VM
-Server
-10.1.0.4
-Linux
-
-
+| Name          | Function      | IP Address  | Operating System |
+| ------------- |:-------------:| -----------:| ---------------- |
+| Jump Box      | Gateway       | 10.0.0.9    | Linux            |
+| Web1          | Server        | 10.0.0.6    | Linux            |
+| Web2          | Server        | 10.0.0.7    | Linux            |
+| ELK-VM        | Server        | 10.1.0.4    | Linux            |
 
 
 
@@ -86,42 +50,15 @@ Machines within the network can only be accessed by :  my IP 73.54.240.243  .
 A summary of the access policies in place can be found in the table below.
 
 
-
-Name
-Publicly Accessible
-Allowed IP Addresses
-
-
-
-
-JumpBox
-Yes/No
-73.54.240.243
+| Name          | Publicly Accessible   | Allowed IP Accessible      |
+| ------------- |:---------------------:| --------------------------:|
+| Jump Box      | Yes/No                | 73.54.240.243              |
+| Web1          | No                    | 10.0.0.6 / 40.88.139.89    |
+| Web2          | No                    | 10.0.0.7 / 40.88.139.89    |
+| ELK-Vnet      | No                    | 10.1.0.0/16 / 40.88.139.89 |
 
 
 
-
-
-
-Web1
-No
-10.0.0.6 / 40.88.139.89
-
-
-
-
-
-Web2
-No
-10.0.0.7 / 40.88.139.89
-
-
-
-
-
-ELK-Vnet
-No
-10.1.0.0/16  /  40.88.139.89
 
 # Elk Configuration
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
@@ -161,8 +98,8 @@ Run the playbook, and navigate to ____ to check that the installation worked as 
 
 
 Which file is the playbook? Where do you copy it? 
-:  (/etc/ansible/filebeat-config.yml)
+:  [/etc/ansible/filebeat-config.yml]
 Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?
 : the /etc/ansible/host file,  then include the Web/ELK server IP's 
 Which URL do you navigate to in order to check that the ELK server is running?
-: http://20.94.254.87:5601 Kibana
+: [http://20.94.254.87:5601] Kibana
