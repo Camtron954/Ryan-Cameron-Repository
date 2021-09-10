@@ -23,7 +23,8 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 Load balancing ensures that the application will be highly :  safe from DDos attacks by changing the flow of web traffic  , in addition to restricting :  outside access, we can use a remote Virtual Machine to safely log in  to the network.
 
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the : data in the files, for when they may have been changed and system :  metrics & stats, for when you are ready to send them to an output .
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the : data in the files, for when they may have been changed and system :  
++ Metrics & stats, for when you are ready to send them to an output .
 
 
 The configuration details of each machine may be found below.
@@ -41,13 +42,14 @@ The configuration details of each machine may be found below.
 
 # Access Policies
 The machines on the internal network are not exposed to the public Internet.
-Only the :  5601 Kibana Port  machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+Machine can accept connections from the Internet. Only the :
++ 5601 Kibana Port  
 
 
-Machines within the network can only be accessed by :  my IP 73.54.240.243  .
+Access to this machine is only allowed from the following IP addresses.
+Machines within the network can only be accessed by :
++ my IP 73.54.240.243.
 
-
-A summary of the access policies in place can be found in the table below.
 
 
 | Name          | Publicly Accessible   | Allowed IP Accessible      |
@@ -62,30 +64,30 @@ A summary of the access policies in place can be found in the table below.
 
 # Elk Configuration
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-:  you can put commands into multiple servers from a single playbook 
++ you can put commands into multiple servers from a single playbook 
 
 The playbook implements the following tasks:
 
-... Install Docker, then update/upgrade
-... Install pip 3 / and Python
-... Attach Image, for your container
-... Run the Docker container with ELK
++ Install Docker, then update/upgrade
++ Install pip 3 / and Python
++ Attach Image, for your container
++ Run the Docker container with ELK
 
 The following screenshot displays the result of running docker ps after successfully configuring the ELK instance.
 
 
 Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-:  Web1, 10.0.0.6 / Web2, 10.0.0.7 
++ Web1, 10.0.0.6 / Web2, 10.0.0.7 
 
 We have installed the following Beats on these machines:
-:  Microbeats 
++ Microbeats 
 
 
 These Beats allow us to collect the following information from each machine:
 
-:  Filebeat monitors the log files, collects events, then sends them to be indexed, Elasticsearch or Logstash. 
-:  Metricbeat monitors collected metrics/stats then sends them to an output, Elasticsearch or Logstash. 
++ Filebeat monitors the log files, collects events, then sends them to be indexed, Elasticsearch or Logstash. 
++ Metricbeat monitors collected metrics/stats then sends them to an output, Elasticsearch or Logstash. 
 
 
 # Using the Playbook
@@ -98,8 +100,8 @@ Run the playbook, and navigate to ____ to check that the installation worked as 
 
 
 Which file is the playbook? Where do you copy it? 
-:  [/etc/ansible/filebeat-config.yml]
++ [/etc/ansible/filebeat-config.yml]
 Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?
-: the /etc/ansible/host file,  then include the Web/ELK server IP's 
++ the /etc/ansible/host file,  then include the Web/ELK server IP's 
 Which URL do you navigate to in order to check that the ELK server is running?
-: [http://20.94.254.87:5601] Kibana
++ [http://20.94.254.87:5601] Kibana
